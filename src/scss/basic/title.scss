@@ -1,0 +1,22 @@
+.title{
+  text-align: center;
+  color: #1c242a;
+  &_luxery{
+    color: #bb9c66;
+    font-family: "Ceremonious";
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 25px;
+  }
+  &_general{
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5.25px;
+  }
+  &_white{
+    color: #fff;
+  }
+}

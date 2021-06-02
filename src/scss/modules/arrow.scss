@@ -1,0 +1,23 @@
+
+body._touch .region__arrow {
+  display: block;
+  width: 0;
+  height: 0;
+  margin: 0px 0px 0px 5px;
+  transition: transform 0.3s ease 0s;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #fff;
+  position: absolute;
+  z-index: 23;
+  right: -12px;
+  top: 4px;
+  @media(max-width: 810px){
+    top: 15px;
+    right: 41px;
+  }
+}
+
+body._touch .header__region .region__arrow._active{
+  transform: rotate(-180deg);
+}
