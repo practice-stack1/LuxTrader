@@ -1,5 +1,11 @@
 .lots{
   padding: 85px 0 50px 0;
+  @media(max-width: 768px){
+    padding: 55px 0 30px 0;
+  }
+  @media(max-width: 568px){
+    padding: 55px 0 20px 0;
+  }
   &__title-luxery{
     margin: 0 0 27px 0;
   }
@@ -12,6 +18,12 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 0 49px 0;
+    @media(max-width: 568px){
+      margin: 0 0 20px 0;
+    }
+    @media(max-width: 568px){
+      display: none;
+    }
     &-sides{
       background-size: contain;
       flex: 0 1 402px;
@@ -31,7 +43,7 @@
     display: flex;
     margin: 0 -49.5px;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
   }
   &__column{
     padding: 0 49.5px;
@@ -39,6 +51,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 0 40px 0;
   }
   &__img{
     position: relative;
@@ -58,7 +71,7 @@
     z-index: 9;
   }
   &__title{
-    flex: 1 0 40px;
+    flex: 1 1 auto;
     position: relative;
     z-index: 10;
     color: #000000;
@@ -74,5 +87,29 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin: 0 0 24px 0;
+  }
+  &__button{
+    width: 206px;
+    min-height: 53px;
+    color: #000000;
+    @include adaptiv-value('font-size', 21, 18, 0);
+    font-weight: 500;
+    line-height: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    &:hover{
+      color: #fff;
+      span{
+        &:after{
+          background-color: rgba($color: #000000, $alpha: 0.1);
+        }
+      }
+    }
+    span{
+      &:after{
+        background-color: rgba($color: #000000, $alpha: 0.0);
+      }
+    }
   }
 }

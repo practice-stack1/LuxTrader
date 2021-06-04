@@ -4,12 +4,12 @@
   &_luxery{
     color: #bb9c66;
     font-family: "Ceremonious";
-    font-size: 40px;
+    @include adaptiv-value('font-size', 40, 30, 0);
     font-weight: 400;
     line-height: 25px;
   }
   &_general{
-    font-size: 35px;
+    @include adaptiv-value('font-size', 35, 25, 0);
     font-weight: 400;
     line-height: 35px;
     text-align: center;

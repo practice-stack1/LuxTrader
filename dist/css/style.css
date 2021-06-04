@@ -161,13 +161,13 @@ body._lock {
 .title_luxery {
   color: #bb9c66;
   font-family: "Ceremonious";
-  font-size: 40px;
+  font-size: calc(30px + 10 * ((100vw - 320px) / 1600));
   font-weight: 400;
   line-height: 25px;
 }
 
 .title_general {
-  font-size: 35px;
+  font-size: calc(25px + 10 * ((100vw - 320px) / 1600));
   font-weight: 400;
   line-height: 35px;
   text-align: center;
@@ -177,6 +177,46 @@ body._lock {
 
 .title_white {
   color: #fff;
+}
+
+.button {
+  position: relative;
+  background-color: transparent;
+  display: block;
+  padding: 10px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  letter-spacing: 1.5px;
+}
+
+.button:hover {
+  background-color: #bb9c66;
+}
+
+.button span:before,
+.button span:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  z-index: 15;
+}
+
+.button span:before {
+  top: 0;
+  left: 0;
+  border: 3px solid #c3a775;
+  border-bottom: none;
+}
+
+.button span:after {
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  left: 0;
+  border: 3px solid #8d642e;
+  border-top: none;
 }
 
 .container {
@@ -535,49 +575,13 @@ body._touch .header__region .region__arrow._active {
 }
 
 .main__button {
-  position: relative;
-  background-color: transparent;
   color: #fff;
+  width: 253px;
+  min-height: 53px;
+  margin: 0 auto 20px auto;
   font-family: "PT Sans";
   font-weight: 400;
-  display: block;
-  padding: 10px;
-  width: 250px;
-  min-height: 50px;
-  margin: 0 auto 20px auto;
-  text-transform: uppercase;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  letter-spacing: 1.5px;
-}
-
-.main__button:hover {
-  background-color: #bb9c66;
-}
-
-.main__button span:before,
-.main__button span:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  z-index: 15;
-}
-
-.main__button span:before {
-  top: 0;
-  left: 0;
-  border: 3px solid #c3a775;
-  border-bottom: none;
-}
-
-.main__button span:after {
-  background-color: rgba(0, 0, 0, 0.1);
-  bottom: 0;
-  left: 0;
-  border: 3px solid #8d642e;
-  border-top: none;
+  font-size: 15px;
 }
 
 .main__tringler {
@@ -650,9 +654,8 @@ body._touch .header__region .region__arrow._active {
   margin: 0 -49.5px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .lots__column {
@@ -670,6 +673,7 @@ body._touch .header__region .region__arrow._active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 0 40px 0;
 }
 
 .lots__img {
@@ -695,8 +699,8 @@ body._touch .header__region .region__arrow._active {
 
 .lots__title {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 40px;
-          flex: 1 0 40px;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   position: relative;
   z-index: 10;
   color: #000000;
@@ -717,15 +721,73 @@ body._touch .header__region .region__arrow._active {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  margin: 0 0 24px 0;
+}
+
+.lots__button {
+  width: 206px;
+  min-height: 53px;
+  color: #000000;
+  font-size: calc(18px + 3 * ((100vw - 320px) / 1600));
+  font-weight: 500;
+  line-height: 25px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.lots__button:hover {
+  color: #fff;
+}
+
+.lots__button:hover span:after {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.lots__button span:after {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.price {
+  background: url("../../icons/lot_section/info-price.svg") 50% no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 122px;
+  min-height: 100px;
+}
+
+.price__title {
+  color: #000000;
+  font-family: "PT Sans";
+  font-size: 14px;
+  font-weight: 400;
+  margin: 5px 0 13px 0;
+}
+
+.price__count {
+  color: #1c242a;
+  font-family: "Bravo";
+  font-size: 44px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 11px 0;
 }
 
 .price__icon {
   width: 7px;
-  height: 11px;
+  height: 8px;
 }
 
 .customers {
   min-height: 50px;
+  width: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -738,6 +800,7 @@ body._touch .header__region .region__arrow._active {
           align-items: center;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  margin: 0 8px 0 0;
 }
 
 .customers__icon {
@@ -761,6 +824,10 @@ body._touch .header__region .region__arrow._active {
   width: 50px;
   height: 1px;
   background-color: #bb9c66;
+}
+
+.customers.side {
+  margin: 0 0 0 8px;
 }
 
 .time {
@@ -929,5 +996,25 @@ body._touch .header__region .region__arrow._active {
   body._touch .region__arrow {
     top: 15px;
     right: 41px;
+  }
+}
+
+@media (max-width: 768px) {
+  .lots {
+    padding: 55px 0 30px 0;
+  }
+}
+
+@media (max-width: 568px) {
+  .lots {
+    padding: 55px 0 20px 0;
+  }
+
+  .lots__header-icon {
+    margin: 0 0 20px 0;
+  }
+
+  .lots__header-icon {
+    display: none;
   }
 }

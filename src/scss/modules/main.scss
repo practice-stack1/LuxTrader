@@ -25,44 +25,13 @@
     min-height: 65px;
   }
   &__button{
-    position: relative;
-    background-color: transparent;
     color: #fff;
+    width: 253px;
+    min-height: 53px;
+    margin: 0 auto 20px auto;
     font-family: "PT Sans";
     font-weight: 400;
-    display: block;
-    padding: 10px;
-    width: 250px;
-    min-height: 50px;
-    margin: 0 auto 20px auto;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    letter-spacing: 1.5px;
-    &:hover{
-      background-color: #bb9c66;
-    }
-    span{
-      &:before, &:after{
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 50%;
-        z-index: 15;
-      }
-      &:before{
-        top: 0;
-        left: 0;
-        border: 3px solid #c3a775;
-        border-bottom: none;
-      }
-      &:after{
-        background-color: rgba($color: #000000, $alpha: 0.1);
-        bottom: 0;
-        left: 0;
-        border: 3px solid #8d642e;
-        border-top: none;
-      }
-    }
+    font-size: 15px;
   }
   &__tringler{
     position: absolute;
