@@ -853,6 +853,100 @@ body._touch .header__region .region__arrow._active {
           transform: translate(-40px, 22px);
 }
 
+.all {
+  margin: 0 0 95px 0;
+}
+
+.all__header {
+  min-height: 100px;
+  margin: 0 0 63px 0;
+}
+
+.header-lots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-lots__container {
+  display: inline-block;
+  min-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header-lots__left-arrow {
+  position: relative;
+}
+
+.header-lots__left-arrow::after {
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  content: '';
+  width: 11px;
+  height: 11px;
+  border: 1px solid #bb9c66;
+  border-radius: 50%;
+}
+
+.header-lots__right-arrow {
+  position: relative;
+}
+
+.header-lots__right-arrow::before {
+  left: -15px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  content: '';
+  width: 11px;
+  height: 11px;
+  border: 1px solid #bb9c66;
+  border-radius: 50%;
+}
+
+.header-lots__header {
+  min-width: 100px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px solid #bb9c66;
+  border-radius: 50%;
+  color: #000000;
+  font-size: 21px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 42px;
+}
+
+.header-lots__header span {
+  padding: 3px;
+}
+
 @media (max-width: 996px) {
   .header__container {
     margin: 0 auto;
