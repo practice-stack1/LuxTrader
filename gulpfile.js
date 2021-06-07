@@ -223,15 +223,6 @@ gulp.task('clearCache', function() {
 
 function icons() {
     gulp.src(path.src.icon)
-    .pipe(
-        webp({
-            quality: 75,
-            method: 3,
-            autoFilter: true,
-            lossless: true
-        })
-    )
-    .pipe(dest(path.build.icon))
     .pipe(src(path.src.icon))
     .pipe(dest(path.build.icon))
     .pipe(browsersync.reload({stream: true}));

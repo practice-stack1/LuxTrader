@@ -1,0 +1,61 @@
+.quotes{
+  padding: 64px 0 65px 0;
+  &__title-luxery{
+    margin: 0 0 25px 0;
+  }
+  &__title-general{
+    margin: 0 0 21px 0;
+  }
+  &__personal{
+    margin: 0 0 4px 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    @media(max-width: 702px){
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__img{
+    display: inline-block;
+    width: 206px;
+    flex: 0 0 206px;
+    height: 276px;
+    align-self: flex-start;
+    margin: 0 62px 0 54px;
+    @media(max-width: 702px){
+      align-self: center;
+      padding: 0 0 42% 0;
+      margin: 0;
+    }
+    @media(max-width: 568px){
+      padding: 0 0 50% 0;
+      margin: 0 0 10px 0;
+    }
+  }
+  &__content{
+    display: inline-block;
+    max-width: 515px;
+    span{
+      display: block;
+      margin: 0 0 8px 0;
+      color: #30373d;
+      font-family: "PT Sans";
+      font-size: 15px;
+      font-weight: 400;
+      &:last-child{
+        margin: 0;
+      }
+    }
+  }
+  &__text{
+    max-width: 515px;
+    min-height: 60px;
+    margin: 0 0 37px 0;
+    font-family: "PT Sans";
+    font-size: 25px;
+    font-style: italic;
+    text-align: left;
+    line-height: 30px;
+  }
+}

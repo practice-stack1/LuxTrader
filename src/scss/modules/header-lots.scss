@@ -8,6 +8,13 @@
     align-items: center;
     justify-content: center;
   }
+  &__left-arrow, &__right-arrow{
+    width: 108px;
+    height: 35px;
+    @media(max-width: 430px){
+      width: 58px;
+    }
+  }
   &__left-arrow{
     position: relative;
     &::after{

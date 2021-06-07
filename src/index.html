@@ -12,56 +12,58 @@
 <body>
   <main>
     <header class="header">
-      <div class="container header__container">
-        <a href="#" class="header__logo ibg">
-          <img src="icons/logo/logo.png" alt="Lux Trader logo">
-        </a>
-        <nav class="header__menu-body">
-          <ul class="header__menu">
-            <li class="header__menu-item">
-              <a href="#">Главная</a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#">Аукцион</a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#">О проекте</a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#">Партнерам</a>
-            </li>
-            <li class="header__menu-item">
-              <a href="#">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="header__region" data-da=".header__menu-body,810,1">
-          <div class="region">
-            <div class="region__img ibg">
-              <img src="icons/header/globe.png" alt="globus">
+      <div class="header__inner">
+        <div class="container header__container">
+          <a href="#" class="header__logo ibg">
+            <img src="icons/logo/logo.png" alt="Lux Trader logo">
+          </a>
+          <nav class="header__menu-body">
+            <ul class="header__menu">
+              <li class="header__menu-item">
+                <a href="#">Главная</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">Аукцион</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">О проекте</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">Партнерам</a>
+              </li>
+              <li class="header__menu-item">
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header__region" data-da=".header__menu-body,810,1">
+            <div class="region">
+              <div class="region__img ibg">
+                <img src="icons/header/globe.png" alt="globus">
+              </div>
+              <div class="region__text">
+                <span>Выбор Региона</span>
+              </div>
             </div>
-            <div class="region__text">
-              <span>Выбор Региона</span>
+            <span class="region__arrow"></span>
+            <ul class="region__sub-menu">
+              <li class="region__sub-menu-item"><span>English</span></li>
+              <li class="region__sub-menu-item"><span>Українськ</span></li>
+              <li class="region__sub-menu-item"><span>Руский</span></li>
+            </ul>
+          </div>
+          <div class="header__user user" data-da=".header__menu-body,810,last">
+            <div class="user__img ibg">
+              <img src="icons/header/user.png" alt="user">
+            </div>
+            <div class="user__arrows">
+              <div class="user__arrow-top ibg"><img src="icons/arrows/arrow_up.png" alt="arrow-top"></div>
+              <div class="user__arrow-bottom ibg"><img src="icons/arrows/arrow_down.png" alt="arrow-bottom"></div>
             </div>
           </div>
-          <span class="region__arrow"></span>
-          <ul class="region__sub-menu">
-            <li class="region__sub-menu-item"><span>English</span></li>
-            <li class="region__sub-menu-item"><span>Українськ</span></li>
-            <li class="region__sub-menu-item"><span>Руский</span></li>
-          </ul>
-        </div>
-        <div class="header__user user" data-da=".header__menu-body,810,last">
-          <div class="user__img ibg">
-            <img src="icons/header/user.png" alt="user">
+          <div class="header__burger">
+            <span></span>
           </div>
-          <div class="user__arrows">
-            <div class="user__arrow-top ibg"><img src="icons/arrows/arrow_up.png" alt="arrow-top"></div>
-            <div class="user__arrow-bottom ibg"><img src="icons/arrows/arrow_down.png" alt="arrow-bottom"></div>
-          </div>
-        </div>
-        <div class="header__burger">
-          <span></span>
         </div>
       </div>
     </header>
@@ -95,10 +97,10 @@
         <h3 class="title title_general lots__title-general">
           лоты Под аукцион
         </h3>
-        <div class="lots__header-icon">
-          <div class="lots__header-icon-sides ibg"><img src="icons/lot_section/right_acessories.png" alt="before-icon"></div>
-          <div class="lots__header-icon-img ibg"><img src="icons/lot_section/watchIcon.svg" alt="central-icon"></div>
-          <div class="lots__header-icon-sides ibg"><img src="icons/lot_section/left_acessories.png" alt="after-icon"></div>
+        <div class="lots__header-icon header-icon">
+          <div class="header-icon__sides ibg"><img src="icons/lot_section/right_acessories.png" alt="before-icon"></div>
+          <div class="header-icon__img ibg"><img src="icons/lot_section/watchIcon.svg" alt="central-icon"></div>
+          <div class="header-icon__sides ibg"><img src="icons/lot_section/left_acessories.png" alt="after-icon"></div>
         </div>
         <div class="lots__row">
           <div class="lots__column">
@@ -198,64 +200,153 @@
       <div class="container all__container">
         <div class="all__header header-lots">
           <div class="header-lots__container">
-            <div class="header-lots__left-arrow"><img src="icons/arrows/arrow_bl.png" alt="left-arrow"></div>
+            <div class="header-lots__left-arrow ibg"><img src="icons/arrows/arrow_bl.png" alt="left-arrow"></div>
             <div class="header-lots__header"><span>Все лоты</span></div>
-            <div class="header-lots__right-arrow"><img src="icons/arrows/arrow_br.png" alt="right-arrow"></div>
+            <div class="header-lots__right-arrow ibg"><img src="icons/arrows/arrow_br.png" alt="right-arrow"></div>
           </div>
         </div>
-        <div class="all__kind kind ibg">
-          <img src="img/kind_lots/watch.jpg" alt="watch">
-          <div class="kind__icon ibg"><img src="icons/type_lots/watch.png" alt="watch"></div>
-          <div class="kind__title">Часы</div>
-          <div class="kind__acessories"></div>
+        <div class="all__wrapper">
+          <div class="all__kind kind ibg">
+            <img src="img/kind_lots/watch.jpg" alt="watch">
+            <div class="kind__icon ibg"><img src="icons/type_lots/watch.png" alt="watch"></div>
+            <div class="kind__title">Часы</div>
+            <div class="kind__acessories"></div>
+          </div>
+          <div class="all__kind kind ibg">
+            <img src="img/kind_lots/jevelery.jpg" alt="jevelery">
+            <div class="kind__icon ibg"><img src="icons/type_lots/jewelery.png" alt="jeveler"></div>
+            <div class="kind__title">Ювелирные Изделия</div>
+            <div class="kind__acessories"></div>
+          </div>
+          <div class="all__kind kind ibg">
+            <img src="img/kind_lots/tecnic.jpg" alt="transport">
+            <div class="kind__icon ibg"><img src="icons/type_lots/cars.png" alt="transport"></div>
+            <div class="kind__title">Автотранспорт и лодки</div>
+            <div class="kind__acessories"></div>
+          </div>
+          <div class="all__kind kind ibg">
+            <img src="img/kind_lots/acessories.jpg" alt="accessories">
+            <div class="kind__icon ibg"><img src="icons/type_lots/acessories.png" alt="accessories"></div>
+            <div class="kind__title">Аксуссуары</div>
+            <div class="kind__acessories"></div>
+          </div>
+          <div class="all__kind kind ibg">
+            <img src="img/kind_lots/property.jpg" alt="property">
+            <div class="kind__icon ibg"><img src="icons/type_lots/property.png" alt="property"></div>
+            <div class="kind__title">Недвижимость</div>
+            <div class="kind__acessories"></div>
+          </div>
+          <div class="all__kind kind ibg">
+            <img src="img/kind_lots/tech.jpg" alt="tech">
+            <div class="kind__icon ibg"><img src="icons/type_lots/tech.png" alt="tech"></div>
+            <div class="kind__title">Hi-Tech</div>
+            <div class="kind__acessories"></div>
+          </div>
+          <div class="all__kind kind ibg">
+            <img src="img/kind_lots/clothes.jpg" alt="clothes">
+            <div class="kind__icon ibg"><img src="icons/type_lots/clothes.png" alt="clothes"></div>
+            <div class="kind__title">Одежда и обувь</div>
+            <div class="kind__acessories"></div>
+          </div>
+          <div class="all__kind kind ibg">
+            <img src="img/kind_lots/Layer_63.jpg" alt="art">
+            <div class="kind__icon ibg"><img src="icons/type_lots/culture.png" alt="art"></div>
+            <div class="kind__title">Предметы искусства</div>
+            <div class="kind__acessories"></div>
+          </div>
+          <div class="all__kind kind ibg">
+            <img src="img/kind_lots/food.jpg" alt="food">
+            <div class="kind__icon ibg"><img src="icons/type_lots/food.png" alt="food"></div>
+            <div class="kind__title">АЛкоголь и еда</div>
+            <div class="kind__acessories"></div>
+          </div>
         </div>
-        <div class="all__kind kind ibg">
-          <img src="img/kind_lots/jevelery.jpg" alt="jevelery">
-          <div class="kind__icon ibg"><img src="icons/type_lots/jewelery.png" alt="jeveler"></div>
-          <div class="kind__title">Ювелирные Изделия</div>
-          <div class="kind__acessories"></div>
+      </div>
+    </section>
+    <section class="about">
+      <div class="container about__container">
+        <p>Мы рады приветствовать вас на уникальной Лакшери аукционе, здесь вы сможете найти достойные для себя лоты. Аукцион по продаже недвижимости во многих развитых странах являюется основным инструментом купли-продажи коммерческой, жилой, и муниципальной недвижимости, в том числе квартир. Общий объем сделок в мире на аукционах по продаже недвижимости варьируется от 30% до 80%. Для России аукцион недвижимости является относительно новым и обретает все большую популярность.</p>
+
+        <p>Мы рады приветствовать вас на уникальной Лакшери аукционе, здесь вы сможете найти достойные для себя лоты. Аукцион по продаже недвижимости во многих развитых странах являюется основным инструментом купли-продажи коммерческой, жилой, и муниципальной недвижимости, в том числе квартир. Общий объем сделок в мире на аукционах по продаже недвижимости варьируется от 30% до 80%. Для России аукцион недвижимости является относительно новым и обретает все большую популярность.</p>
+
+        <p>Муниципальной недвижимости, в том числе квартир. Общий объем сделок в мире на аукционах по продаже недвижимости варьируется от 30% до 80%.</p>
+      </div>
+    </section>
+    <section class="service">
+      <div class="service__container container">
+        <h2 class="title title_luxery service__title-luxery">
+          Дополнительные
+        </h2>
+        <h3 class="title title_general service__title-general">
+          услуги
+        </h3>
+        <div class="service__header-icon header-icon">
+          <div class="header-icon__sides ibg"><img src="icons/lot_section/right_acessories.png" alt="before-icon"></div>
+          <div class="header-icon__img ibg"><img src="icons/services/watchIcon.png" alt="central-icon"></div>
+          <div class="header-icon__sides ibg"><img src="icons/lot_section/left_acessories.png" alt="after-icon"></div>
         </div>
-        <div class="all__kind kind ibg">
-          <img src="img/kind_lots/tecnic.jpg" alt="transport">
-          <div class="kind__icon ibg"><img src="icons/type_lots/cars.png" alt="transport"></div>
-          <div class="kind__title">Автотранспорт и лодки</div>
-          <div class="kind__acessories"></div>
+        <div class="service__row">
+          <div class="service__column">
+            <div class="service__item">
+              <div class="service__img ibg"><img src="img/services/magnifier.png" alt="magnifier"></div>
+              <div class="service__content">
+                <div class="service__title">Экспертная оценка</div>
+                <div class="service__text">Мы собираем эксклюзивную публику и экслюзивные лоты, даем удобный </div>
+              </div>
+              <a href="#" class="service__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="service__column">
+            <div class="service__item">
+              <div class="service__img ibg"><img src="img/services/cogwheel.png" alt="cogwheel"></div>
+              <div class="service__content">
+                <div class="service__title">заказ комплектующих</div>
+                <div class="service__text">Мы собираем эксклюзивную публику и экслюзивные лоты, даем удобный </div>
+              </div>
+              <a href="#" class="service__link">Подробнее</a>
+            </div>
+          </div>
+          <div class="service__column">
+            <div class="service__item">
+              <div class="service__img ibg"><img src="img/services/service.png" alt="service"></div>
+              <div class="service__content">
+                <div class="service__title">ремонт и реставрациЯ</div>
+                <div class="service__text">Мы собираем эксклюзивную публику и экслюзивные лоты, даем удобный </div>
+              </div>
+              <a href="#" class="service__link">Подробнее</a></div>
+          </div>
         </div>
-        <div class="all__kind kind ibg">
-          <img src="img/kind_lots/acessories.jpg" alt="accessories">
-          <div class="kind__icon ibg"><img src="icons/type_lots/acessories.png" alt="accessories"></div>
-          <div class="kind__title">Аксуссуары</div>
-          <div class="kind__acessories"></div>
+      </div>
+    </section>
+    <section class="quotes">
+      <div class="container quotes__container">
+        <h2 class="title title_luxery quotes__title-luxery">
+          Интересные
+        </h2>
+        <h3 class="title title_general quotes__title-general">
+          ЦитатЫ
+        </h3>
+        <div class="quotes__header-icon header-icon">
+          <div class="header-icon__sides ibg"><img src="icons/lot_section/right_acessories.png" alt="before-icon"></div>
+          <div class="header-icon__img ibg"><img src="icons/comments/comment.png" alt="central-icon"></div>
+          <div class="header-icon__sides ibg"><img src="icons/lot_section/left_acessories.png" alt="after-icon"></div>
         </div>
-        <div class="all__kind kind ibg">
-          <img src="img/kind_lots/property.jpg" alt="property">
-          <div class="kind__icon ibg"><img src="icons/type_lots/property.png" alt="property"></div>
-          <div class="kind__title">Недвижимость</div>
-          <div class="kind__acessories"></div>
+        <div class="quotes__personal">
+          <div class="quotes__img ibg">
+            <img src="img/comments/mark.png" alt="Mark Twen">
+          </div>
+          <div class="quotes__content">
+            <div class="quotes__text">«Легче одурачить людей, чем убедить их в том,
+              что они одурачены»
+            </div>
+            <span>Марк Твен</span>
+            <span>1935 -1910</span>
+          </div>
         </div>
-        <div class="all__kind kind ibg">
-          <img src="img/kind_lots/tech.jpg" alt="tech">
-          <div class="kind__icon ibg"><img src="icons/type_lots/tech.png" alt="tech"></div>
-          <div class="kind__title">Hi-Tech</div>
-          <div class="kind__acessories"></div>
-        </div>
-        <div class="all__kind kind ibg">
-          <img src="img/kind_lots/clothes.jpg" alt="clothes">
-          <div class="kind__icon ibg"><img src="icons/type_lots/clothes.png" alt="clothes"></div>
-          <div class="kind__title">Одежда и обувь</div>
-          <div class="kind__acessories"></div>
-        </div>
-        <div class="all__kind kind ibg">
-          <img src="img/kind_lots/Layer_63.jpg" alt="art">
-          <div class="kind__icon ibg"><img src="icons/type_lots/culture.png" alt="art"></div>
-          <div class="kind__title">Предметы искусства</div>
-          <div class="kind__acessories"></div>
-        </div>
-        <div class="all__kind kind ibg">
-          <img src="img/kind_lots/food.jpg" alt="food">
-          <div class="kind__icon ibg"><img src="icons/type_lots/food.png" alt="food"></div>
-          <div class="kind__title">АЛкоголь и еда</div>
-          <div class="kind__acessories"></div>
+        <div class="quotes__revert">
+          <span></span>
+          <div class="quotes__revert-img"><img src="icons/comments/revert.png" alt="revert"></div>
+          <span></span>
         </div>
       </div>
     </section>
