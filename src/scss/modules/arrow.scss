@@ -1,5 +1,5 @@
 
-body._touch .region__arrow {
+body._touch .menu__arrow {
   display: block;
   width: 0;
   height: 0;
@@ -10,14 +10,14 @@ body._touch .region__arrow {
   border-top: 10px solid #fff;
   position: absolute;
   z-index: 23;
-  right: -12px;
-  top: 4px;
-  @media(max-width: 810px){
-    top: 15px;
-    right: 41px;
-  }
 }
 
-body._touch .header__region .region__arrow._active{
+body._touch .header__region .menu__arrow._active{
   transform: rotate(-180deg);
+}
+body._touch .header__user .menu__arrow._active{
+  transform: rotate(-180deg);
+}
+body._touch .header__user .user__arrows {
+  display: none;
 }

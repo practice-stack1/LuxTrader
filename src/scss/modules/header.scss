@@ -141,6 +141,12 @@
     @media(max-width: 810px){
       padding: 10px 20px;
     }
+    &:not(.nohover):hover{
+      .user__sub-menu{
+        opacity: 1;
+        visibility: visible;
+      }
+    }
   }
   &__burger{
     display: none;

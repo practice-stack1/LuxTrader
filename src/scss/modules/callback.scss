@@ -9,5 +9,14 @@
   }
   &__text{
     border-bottom: 1px dashed #bb9c66;
+    transition: all 0.3s ease;
+    &-a{
+      color: #bb9c66;
+    }
+    @media(min-width: 910px){
+      &:hover{
+        border-bottom: none;
+      }
+    }
   }
 }
