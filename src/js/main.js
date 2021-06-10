@@ -3,6 +3,10 @@ import './basic/dynamic_adaptive';
 import burger from './modules/burger';
 import './basic/ibg';
 import arrow from './modules/arrow';
+import './basic/dynamic_adaptive';
+import './modules/setLocalization';
+import './modules/localization';
+
 
 
 window.addEventListener('DOMContentLoaded', () => {

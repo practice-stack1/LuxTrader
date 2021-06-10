@@ -2,7 +2,7 @@
   background-color: #1c242a;
   padding: 61px 0 62px;
   @media(max-width: 400px){
-    padding: 41px 0 42px;
+    padding: 41px 0 0px;
   }
   &__title-luxery{
     margin: 0 0 33px 0;
@@ -23,10 +23,16 @@
     justify-content: space-between;
     justify-content: center;
     margin: 0 -52px;
+    @media(max-width: 990px){
+      margin: 0;
+    }
   }
   &__column{
     padding: 0 51px 40px 51px;
     display: flex;
+    @media(max-width: 394px){
+      padding: 0;
+    }
   }
   &__item{
     display: flex;

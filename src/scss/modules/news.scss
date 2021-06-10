@@ -1,0 +1,27 @@
+.news{
+  &__container{
+    margin: 0 0 38px 0;
+    padding: 0 20px 0 0;
+    &:last-child{
+      margin: 0;
+    }
+  }
+  &__data{
+    display: block;
+    color: #bb9c66;
+    font-family: "PT Sans";
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 0 12px 0;
+  }
+  &__title{
+    color: #000;
+    display: inline-block;
+    font-family: "PT Sans";
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: underline;
+    margin: 0 0 9px 0;
+  }
+
+}

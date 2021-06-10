@@ -10,10 +10,10 @@
     background: url('../../img/about/3-layers.png') left repeat-y;
     padding: 10px 10px 25px 129px;
     width: 100%;
-    min-height: 340px;
+    min-height: 375px;
     @media(max-width: 840px){
       background: none;
-      padding: 10px 20px 25px 0px;
+      padding: 0 20px;
     }
   }
   p{
@@ -28,7 +28,7 @@
       margin: 0;
     }
     @media(max-width: 840px){
-      padding: 0 0 0 40px;
+      // padding: 0 0 0 20px;
     }
   }
 }
