@@ -39,7 +39,7 @@
     }
   }
   &__arrow{
-    right: -12px;
+    right: -14px;
     top: 4px;
     @media(max-width: 810px){
       top: 15px;
@@ -50,7 +50,6 @@
     width: 150px;
     min-height: 50px;
     padding: 27px 10px 10px 10px;
-
     @media(max-width: 876px){
       left: -80px;
     }
