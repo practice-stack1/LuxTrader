@@ -1,0 +1,45 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+  font-family: $font_name;
+  font-display: swap;
+  src: local('#{$file_name}'),
+      url("../fonts/#{$file_name}.woff") format("woff"),
+      url("../fonts/#{$file_name}.woff2") format("woff2");
+  font-weight: #{$weight};
+  font-style: #{$style};
+  }
+}
+@import 'basic/fonts.scss';
+@import 'basic/ibg.scss';
+@import 'basic/null.scss';
+@import 'basic/variables.scss';
+@import 'basic/mixins.scss';
+@import 'basic/adaptive_properties.scss';
+@import 'basic/basic.scss';
+@import 'basic/title.scss';
+@import 'modules/sub-menu.scss';
+@import 'modules/button.scss';
+@import 'modules/container.scss';
+@import 'modules/header.scss';
+@import 'modules/region.scss';
+@import 'modules/arrow.scss';
+@import 'modules/user.scss';
+@import 'modules/main.scss';
+@import 'modules/lots.scss';
+@import 'modules/header-icon.scss';
+@import 'modules/price.scss';
+@import 'modules/customers.scss';
+@import 'modules/time.scss';
+@import 'modules/all.scss';
+@import 'modules/kind.scss';
+@import 'modules/header-lots.scss';
+@import 'modules/about.scss';
+@import 'modules/service.scss';
+@import 'modules/quotes.scss';
+@import 'modules/events.scss';
+@import 'modules/news.scss';
+@import 'modules/occasion.scss';
+@import 'modules/forms.scss';
+@import 'modules/footer.scss';
+@import 'modules/callback.scss';
+

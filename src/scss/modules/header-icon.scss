@@ -1,0 +1,27 @@
+.header-icon{
+  height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 49px 0;
+  @media(max-width: 568px){
+    margin: 0 0 20px 0;
+  }
+  @media(max-width: 568px){
+    display: none;
+  }
+  &__sides{
+    background-size: contain;
+    flex: 0 1 402px;
+    height: 25px;
+  }
+  &__img{
+    background-size: contain;
+    height: 57px;
+    flex: 0 1 50px;
+    margin: 0 50px;
+    @media(max-width: 910px){
+      margin: 0 10px;
+    }
+  }
+}

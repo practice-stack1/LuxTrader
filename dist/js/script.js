@@ -543,6 +543,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_arrow__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/arrow */ "./src/js/modules/arrow.js");
 /* harmony import */ var _modules_setLocalization__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/setLocalization */ "./src/js/modules/setLocalization.js");
 /* harmony import */ var _modules_localization__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/localization */ "./src/js/modules/localization.js");
+/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/timer */ "./src/js/modules/timer.js");
+/* harmony import */ var _modules_raisebet__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/raisebet */ "./src/js/modules/raisebet.js");
 
 
 
@@ -551,10 +553,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+var deadline = '2021-06-15',
+    timers = document.querySelectorAll('.time__count');
 window.addEventListener('DOMContentLoaded', function () {
   Object(_modules_header_height__WEBPACK_IMPORTED_MODULE_0__["default"])('.header', '.header__container');
   Object(_modules_burger__WEBPACK_IMPORTED_MODULE_2__["default"])('.header__burger', '.header__menu-body');
   Object(_modules_arrow__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  Object(_modules_timer__WEBPACK_IMPORTED_MODULE_7__["default"])(timers, deadline);
+  Object(_modules_raisebet__WEBPACK_IMPORTED_MODULE_8__["default"])('.lots__button', 5000);
 });
 
 /***/ }),
@@ -710,7 +718,6 @@ function localization(data) {
     }
 
     if (checkInput(key)) {
-      console.log(true);
       setInputTranslate(data[key][lang], key);
     }
   }
@@ -760,6 +767,73 @@ function checkInput(key) {
 
 /***/ }),
 
+/***/ "./src/js/modules/raisebet.js":
+/*!************************************!*\
+  !*** ./src/js/modules/raisebet.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+var raise = function raise(triggers_btn, bet) {
+  var triggers = document.querySelectorAll(triggers_btn);
+  triggers.forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      var count = trigger.parentElement.querySelector('.price__count');
+      raiseBet(bet, count);
+    });
+  });
+
+  function raiseBet(bet, count_block) {
+    count_block.textContent = addGap(getSum(count_block, bet));
+  }
+
+  function getSum(count, bet) {
+    return Number(count.textContent.replace(/\s/g, '')) + bet;
+  }
+
+  function addGap(num) {
+    var string = String(num);
+    var arrStr = string.split('');
+
+    var arrStr2 = _toConsumableArray(arrStr);
+
+    var counter = 1;
+
+    for (var i = arrStr.length - 1; i >= 0; i--) {
+      if (counter === 3 && i - 1 >= 0) {
+        var newArr = arrStr.splice(0, i);
+        newArr.push(' ');
+        arrStr2 = newArr.concat(arrStr);
+        arrStr = arrStr2;
+        counter = 1;
+        i--;
+      }
+
+      counter++;
+    }
+
+    return arrStr2.join('');
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (raise);
+
+/***/ }),
+
 /***/ "./src/js/modules/setLocalization.js":
 /*!*******************************************!*\
   !*** ./src/js/modules/setLocalization.js ***!
@@ -790,6 +864,65 @@ function setLang(language) {
     elem.setAttribute('data-loc', language);
   });
 }
+
+/***/ }),
+
+/***/ "./src/js/modules/timer.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/timer.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var timer = function timer(timers, endtime) {
+  var getTimeRemaining = function getTimeRemaining(endtime) {
+    var t = Date.parse(endtime) - Date.parse(new Date()),
+        seconds = Math.floor(t / 1000 % 60),
+        minutes = Math.floor(t / 1000 / 60 % 60),
+        hours = Math.floor(t / (1000 * 60 * 60) % 24),
+        days = Math.floor(t / (1000 * 60 * 60 * 24));
+    return {
+      'total': t,
+      'days': days,
+      'hours': hours,
+      'minutes': minutes,
+      'seconds': seconds
+    };
+  };
+
+  var setClock = function setClock(timer, endtime) {
+    var days = timer.querySelector('#days'),
+        hours = timer.querySelector('#hours'),
+        minutes = timer.querySelector('#minutes'),
+        seconds = timer.querySelector('#seconds'),
+        timeInterval = setInterval(updateClock, 1000);
+    updateClock();
+
+    function updateClock() {
+      var t = getTimeRemaining(endtime);
+      days.textContent = t.days;
+      hours.textContent = t.hours;
+      minutes.textContent = t.minutes;
+      seconds.textContent = t.seconds;
+
+      if (t.total <= 0) {
+        days.textContent = "0";
+        hours.textContent = "0";
+        minutes.textContent = "0";
+        seconds.textContent = "0";
+        clearInterval(timeInterval);
+      }
+    }
+  };
+
+  timers.forEach(function (timer) {
+    setClock(timer, endtime);
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (timer);
 
 /***/ })
 
