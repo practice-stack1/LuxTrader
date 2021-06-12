@@ -843,6 +843,7 @@ body._touch .header__user .user__arrows {
 }
 
 .price__count {
+  min-width: 130px;
   color: #1c242a;
   font-family: "Bravo";
   font-size: 44px;
@@ -914,6 +915,7 @@ body._touch .header__user .user__arrows {
 }
 
 .time__count {
+  position: absolute;
   color: #000000;
   font-family: "PT Sans";
   font-size: 18px;
