@@ -545,6 +545,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_localization__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/localization */ "./src/js/modules/localization.js");
 /* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/timer */ "./src/js/modules/timer.js");
 /* harmony import */ var _modules_raisebet__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/raisebet */ "./src/js/modules/raisebet.js");
+/* harmony import */ var _modules_checkemail__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/checkemail */ "./src/js/modules/checkemail.js");
+
 
 
 
@@ -563,6 +565,7 @@ window.addEventListener('DOMContentLoaded', function () {
   Object(_modules_arrow__WEBPACK_IMPORTED_MODULE_4__["default"])();
   Object(_modules_timer__WEBPACK_IMPORTED_MODULE_7__["default"])(timers, deadline);
   Object(_modules_raisebet__WEBPACK_IMPORTED_MODULE_8__["default"])('.lots__button', 5000);
+  Object(_modules_checkemail__WEBPACK_IMPORTED_MODULE_9__["default"])('.forms__mail-input', '.forms__mail-btn');
 });
 
 /***/ }),
@@ -671,6 +674,43 @@ var burger = function burger(header_burger, header_menu) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (burger);
+
+/***/ }),
+
+/***/ "./src/js/modules/checkemail.js":
+/*!**************************************!*\
+  !*** ./src/js/modules/checkemail.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _regulars_check_email__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./regulars/check-email */ "./src/js/modules/regulars/check-email.js");
+
+
+var checkMail = function checkMail(input, trigger) {
+  var btns = document.querySelectorAll(trigger);
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var mail = btn.parentElement.querySelector(input);
+      var borders = document.querySelector('.forms__mail');
+
+      if (!Object(_regulars_check_email__WEBPACK_IMPORTED_MODULE_0__["default"])(mail)) {
+        borders.style.border = '3px solid red';
+        setTimeout(function () {
+          borders.style.border = '3px solid #bb9c66';
+        }, 1500);
+      } else {
+        mail.value = '';
+        borders.style.border = '3px solid #bb9c66';
+      }
+    });
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (checkMail);
 
 /***/ }),
 
@@ -831,6 +871,27 @@ var raise = function raise(triggers_btn, bet) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (raise);
+
+/***/ }),
+
+/***/ "./src/js/modules/regulars/check-email.js":
+/*!************************************************!*\
+  !*** ./src/js/modules/regulars/check-email.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function email_test(input) {
+  if (input.value !== '') {
+    return /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(input.value);
+  } else {
+    return false;
+  }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (email_test);
 
 /***/ }),
 

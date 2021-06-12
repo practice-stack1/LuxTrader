@@ -83,7 +83,12 @@
     text-transform: uppercase;
     letter-spacing: 2.12px;
     &:hover{
-      text-decoration: underline;
+      &:after{
+        right: -55px;
+      }
+      &:before{
+        left: -55px;
+      }
     }
     &:after, &:before{
       position: absolute;
@@ -94,6 +99,7 @@
       width: 50px;
       height: 1px;
       background-color: #bb9c66;
+      transition: all 0.3s ease;
     }
     &:after{
       right: -60px;

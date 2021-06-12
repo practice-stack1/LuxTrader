@@ -9,19 +9,28 @@
   &:hover{
     background-color: #bb9c66;
   }
+  &:active{
+    span{
+      &:after{
+        height: 100%;
+        border-top: 3px solid #8d642e;
+      }
+    }
+  }
   span{
     &:before, &:after{
       content: "";
       position: absolute;
       width: 100%;
       height: 50%;
-      z-index: 15;
+      transition: height 0.1s ease, border-top 0.01s ease 0.09s;
     }
     &:before{
       top: 0;
       left: 0;
       border: 3px solid #c3a775;
       border-bottom: none;
+      z-index: 15;
     }
     &:after{
       background-color: rgba($color: #000000, $alpha: 0.1);
@@ -29,6 +38,7 @@
       left: 0;
       border: 3px solid #8d642e;
       border-top: none;
+      z-index: 16;
     }
   }
 }

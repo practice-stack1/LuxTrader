@@ -248,13 +248,20 @@ body._lock {
   background-color: #bb9c66;
 }
 
+.button:active span:after {
+  height: 100%;
+  border-top: 3px solid #8d642e;
+}
+
 .button span:before,
 .button span:after {
   content: "";
   position: absolute;
   width: 100%;
   height: 50%;
-  z-index: 15;
+  -webkit-transition: height 0.1s ease, border-top 0.01s ease 0.09s;
+  -o-transition: height 0.1s ease, border-top 0.01s ease 0.09s;
+  transition: height 0.1s ease, border-top 0.01s ease 0.09s;
 }
 
 .button span:before {
@@ -262,6 +269,7 @@ body._lock {
   left: 0;
   border: 3px solid #c3a775;
   border-bottom: none;
+  z-index: 15;
 }
 
 .button span:after {
@@ -270,6 +278,7 @@ body._lock {
   left: 0;
   border: 3px solid #8d642e;
   border-top: none;
+  z-index: 16;
 }
 
 .container {
@@ -1248,8 +1257,12 @@ body._touch .header__user .user__arrows {
   letter-spacing: 2.12px;
 }
 
-.service__link:hover {
-  text-decoration: underline;
+.service__link:hover:after {
+  right: -55px;
+}
+
+.service__link:hover:before {
+  left: -55px;
 }
 
 .service__link:after,
@@ -1264,6 +1277,9 @@ body._touch .header__user .user__arrows {
   width: 50px;
   height: 1px;
   background-color: #bb9c66;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .service__link:after {
