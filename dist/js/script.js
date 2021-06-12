@@ -514,6 +514,11 @@ var localizationData = {
     'ukr': 'Ваш e-mail',
     'ru': 'Ваш e-mail',
     'en': 'Your e-mail'
+  },
+  '.sub-menu-item-span': {
+    'ukr': ['Особистий кабінет', 'Мої ставки', 'Мої лоти'],
+    'ru': ['Личный кабине', 'Мои ставки', 'Мои лоты'],
+    'en': ['My Account', 'My Bets', 'My Lots']
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = (localizationData);
