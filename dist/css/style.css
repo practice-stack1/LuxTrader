@@ -106,6 +106,7 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 input::-ms-clear {
@@ -146,6 +147,10 @@ h5,
 h6 {
   font-weight: inherit;
   font-size: inherit;
+}
+
+main {
+  overflow-x: hidden;
 }
 
 body._lock {
@@ -914,9 +919,13 @@ body._touch .header__user .user__arrows {
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
-  -webkit-transform: translate(-40px, 22px);
-      -ms-transform: translate(-40px, 22px);
-          transform: translate(-40px, 22px);
+  left: 50%;
+  -webkit-transform: translate(-50%, 22px);
+      -ms-transform: translate(-50%, 22px);
+          transform: translate(-50%, 22px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .all {

@@ -8,7 +8,6 @@ function localization(data){
       setTranslate(data[key][lang], key);
     }
     if(checkInput(key)){
-      console.log(true);
       setInputTranslate(data[key][lang], key);
     }
 

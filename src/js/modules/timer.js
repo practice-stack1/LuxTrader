@@ -1,5 +1,4 @@
 const timer = (timers, endtime) => {
-
   const getTimeRemaining = (endtime) => {
     const t = Date.parse(endtime) - Date.parse(new Date()),
           seconds = Math.floor((t/1000) % 60),
@@ -13,9 +12,10 @@ const timer = (timers, endtime) => {
       'minutes': minutes,
       'seconds': seconds
     };
-  }
+  };
 
   const setClock = (timer, endtime) => {
+    console.log(timer, endtime);
     const days = timer.querySelector('#days'),
           hours = timer.querySelector('#hours'),
           minutes = timer.querySelector('#minutes'),
