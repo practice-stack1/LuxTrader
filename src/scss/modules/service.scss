@@ -30,8 +30,8 @@
   &__column{
     padding: 0 51px 40px 51px;
     display: flex;
-    @media(max-width: 394px){
-      padding: 0;
+    @media(max-width: 400px){
+      padding: 0 0 40px 0;
     }
   }
   &__item{
@@ -82,6 +82,14 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2.12px;
+    &:hover{
+      &:after{
+        right: -55px;
+      }
+      &:before{
+        left: -55px;
+      }
+    }
     &:after, &:before{
       position: absolute;
       top: 50%;
@@ -91,6 +99,7 @@
       width: 50px;
       height: 1px;
       background-color: #bb9c66;
+      transition: all 0.3s ease;
     }
     &:after{
       right: -60px;
