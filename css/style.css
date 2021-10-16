@@ -965,6 +965,7 @@ body._touch .header__user .user__arrows {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+          cursor: pointer;
 }
 
 .kind:after {
