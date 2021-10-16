@@ -557,7 +557,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var deadline = '2021-06-15',
+var deadline = '2022-06-15',
     timers = document.querySelectorAll('.time__count');
 window.addEventListener('DOMContentLoaded', function () {
   Object(_modules_header_height__WEBPACK_IMPORTED_MODULE_0__["default"])('.header', '.header__container');
