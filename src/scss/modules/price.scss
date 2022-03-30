@@ -1,28 +1,28 @@
-.price{
-  background: url('../../icons/lot_section/info-price.svg') 50% no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 122px;
-  min-height: 100px;
-  &__title{
-    color: #000000;
-    font-family: "PT Sans";
-    font-size: 14px;
-    font-weight: 400;
-    margin: 5px 0 13px 0;
-  }
-  &__count{
-    min-width: 130px;
-    color: #1c242a;
-    font-family: "Bravo";
-    font-size: 44px;
-    font-weight: 400;
-    text-align: center;
-    margin: 0 0 11px 0;
-  }
-  &__icon{
-    width: 7px;
-    height: 8px;
-  }
+.price {
+    background: url("../../img/icons/lot_section/info-price.svg") 50% no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 122px;
+    min-height: 100px;
+    &__title {
+        color: #000000;
+        font-family: "PT Sans";
+        font-size: 14px;
+        font-weight: 400;
+        margin: 5px 0 13px 0;
+    }
+    &__count {
+        min-width: 130px;
+        color: #1c242a;
+        font-family: "Bravo";
+        font-size: 44px;
+        font-weight: 400;
+        text-align: center;
+        margin: 0 0 11px 0;
+    }
+    &__icon {
+        width: 7px;
+        height: 8px;
+    }
 }
